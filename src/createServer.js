@@ -9,7 +9,7 @@ const zlib = require('zlib');
 function createServer() {
   const server = http.createServer((req, res) => {
     if (req.method === 'GET' && req.url === '/') {
-      const filePath = path.join(__dirname, 'index.html');
+      const filePath = path.join(__dirname, 'appCompressed.html');
 
       fs.readFile(filePath, (err, data) => {
         if (err) {
